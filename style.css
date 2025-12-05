@@ -342,3 +342,23 @@ input[type=number] {
     font-weight: 600;
     align-self: flex-end;
 }
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-top: 5px;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
