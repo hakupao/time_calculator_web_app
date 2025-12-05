@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoCalc - Premium Time Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>ChronoCalc</h1>
+            <p>Flexible Time Arithmetic</p>
+        </header>
+
+        <main class="calculator-card">
+            <div id="time-rows-container">
+                <!-- Rows will be added here dynamically -->
+            </div>
+
+            <button id="add-row-btn" class="action-btn secondary">+ Add Time Entry</button>
+            <button id="calculate-btn" class="action-btn primary">Calculate Result</button>
+            <button id="continue-btn" class="action-btn secondary" style="display: none;">Continue with Result</button>
+
+            <div class="result-display" id="result-display">
+                <span class="result-label">Total Duration</span>
+                <div class="result-value">
+                    <span id="res-h">00</span><small>h</small>
+                    <span id="res-m">00</span><small>m</small>
+                </div>
+            </div>
+
+            <div id="history-section" style="display: none;">
+                <div class="history-divider"></div>
+                <h3 class="history-title">History</h3>
+                <div id="history-list">
+                    <!-- History items will be added here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
