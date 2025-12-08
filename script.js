@@ -8,8 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const continueBtn = document.getElementById('continue-btn');
     const historySection = document.getElementById('history-section');
     const historyList = document.getElementById('history-list');
+    const clearHistoryBtn = document.getElementById('clear-history-btn');
+    const resetBtn = document.getElementById('reset-btn');
 
     let lastCalculatedMinutes = 0;
+
+    // Load history from localStorage on startup
+    loadHistory();
 
     // Add initial row
     addRow();
@@ -21,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     calculateBtn.addEventListener('click', calculateTotal);
     continueBtn.addEventListener('click', continueWithResult);
+    clearHistoryBtn.addEventListener('click', clearHistory);
+    resetBtn.addEventListener('click', resetCalculator);
 
     function addRow() {
         const row = document.createElement('div');
@@ -57,10 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (container.children.length > 1) {
                 row.remove();
             } else {
-                // If checking last row, maybe just clear inputs? 
-                // For now, let's enforce at least one row, or just remove and user can add.
-                // Let's enforce keeping 1 row minimum for usability.
-                alert("You need at least one time entry.");
+                // If it's the last row, just clear the inputs
+                row.querySelector('.time-h').value = '';
+                row.querySelector('.time-m').value = '';
             }
         });
 
@@ -94,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lastCalculatedMinutes = totalMinutes;
         displayResult(totalMinutes);
         continueBtn.style.display = 'inline-block';
+        resetBtn.style.display = 'inline-block';
     }
 
     function continueWithResult() {
@@ -127,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resH.textContent = "00";
         resM.textContent = "00";
         continueBtn.style.display = 'none';
+        resetBtn.style.display = 'none';
         resultDisplay.style.opacity = '0.5';
     }
 
@@ -152,6 +160,30 @@ document.addEventListener('DOMContentLoaded', () => {
         return num.toString().padStart(2, '0');
     }
 
+    function createHistoryItemElement(itemData) {
+        const item = document.createElement('div');
+        item.className = 'history-item';
+        item.innerHTML = `
+            <div class="history-expression">${itemData.expression} =</div>
+            <div class="history-result">${itemData.resultString}</div>
+        `;
+        return item;
+    }
+
+    function loadHistory() {
+        const history = JSON.parse(localStorage.getItem('timeCalcHistory')) || [];
+        historyList.innerHTML = ''; // Clear existing list
+        if (history.length > 0) {
+            history.forEach(itemData => {
+                const itemElement = createHistoryItemElement(itemData);
+                historyList.appendChild(itemElement); // Use appendChild to keep the order
+            });
+            historySection.style.display = 'block';
+        } else {
+            historySection.style.display = 'none';
+        }
+    }
+
     function saveHistory() {
         const rows = document.querySelectorAll('.time-row');
         let expressionParts = [];
@@ -160,11 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const op = row.querySelector('.row-op-toggle').textContent;
             const h = row.querySelector('.time-h').value || '0';
             const m = row.querySelector('.time-m').value || '0';
-
-            // For the first item, if it's positive, we might not want to show the + sign, 
-            // but for consistency let's show it if it's explicit or just keep the logic simple.
-            // If it's the very first number and positive, usually no sign. 
-            // BUT, our UI has a toggle. Let's respect the toggle.
 
             let part = `${op} ${h}h ${m}m`;
             if (index === 0 && op === '+') {
@@ -182,16 +209,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const m = absMin % 60;
         const resultString = `${isNegative ? '-' : ''}${pad(h)}h ${pad(m)}m`;
 
-        // Create DOM element
-        const item = document.createElement('div');
-        item.className = 'history-item';
+        const historyItemData = { expression, resultString };
 
-        item.innerHTML = `
-            <div class="history-expression">${expression} =</div>
-            <div class="history-result">${resultString}</div>
-        `;
-
-        historyList.prepend(item);
+        // Create DOM element and add to UI
+        const itemElement = createHistoryItemElement(historyItemData);
+        historyList.prepend(itemElement);
         historySection.style.display = 'block';
+
+        // Save to localStorage
+        const history = JSON.parse(localStorage.getItem('timeCalcHistory')) || [];
+        history.unshift(historyItemData); // Add to the beginning to show newest first
+        localStorage.setItem('timeCalcHistory', JSON.stringify(history));
+    }
+
+    function clearHistory() {
+        localStorage.removeItem('timeCalcHistory');
+        historyList.innerHTML = '';
+        historySection.style.display = 'none';
+    }
+
+    function resetCalculator() {
+        container.innerHTML = '';
+        addRow();
+        addRow();
+
+        resH.textContent = '00';
+        resM.textContent = '00';
+        resultDisplay.style.opacity = '1';
+
+        continueBtn.style.display = 'none';
+        resetBtn.style.display = 'none';
     }
 });

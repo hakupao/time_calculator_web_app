@@ -35,6 +35,7 @@
 
             <button id="add-row-btn" class="action-btn secondary">+ Add Time Entry</button>
             <button id="calculate-btn" class="action-btn primary">Calculate Result</button>
+            <button id="reset-btn" class="action-btn secondary" style="display: none;">Reset</button>
             <button id="continue-btn" class="action-btn secondary" style="display: none;">Continue with Result</button>
 
             <div class="result-display" id="result-display">
@@ -47,7 +48,10 @@
 
             <div id="history-section" style="display: none;">
                 <div class="history-divider"></div>
-                <h3 class="history-title">History</h3>
+                <div class="history-header">
+                    <h3 class="history-title">History</h3>
+                    <button id="clear-history-btn" class="text-btn">Clear History</button>
+                </div>
                 <div id="history-list">
                     <!-- History items will be added here -->
                 </div>
