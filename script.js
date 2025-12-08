@@ -62,7 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const delBtn = row.querySelector('.delete-btn');
         delBtn.addEventListener('click', () => {
             if (container.children.length > 1) {
-                row.remove();
+                row.classList.add('removing');
+                // Let animation play before removing
+                setTimeout(() => {
+                    row.remove();
+                }, 300);
             } else {
                 // If it's the last row, just clear the inputs
                 row.querySelector('.time-h').value = '';
@@ -139,21 +143,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayResult(totalMin) {
+        const resultValue = resultDisplay.querySelector('.result-value');
         const isNegative = totalMin < 0;
         let absMin = Math.abs(totalMin);
 
         const h = Math.floor(absMin / 60);
         const m = absMin % 60;
 
-        // Animate numbers
-        resH.textContent = isNegative ? `-${pad(h)}` : pad(h);
-        resM.textContent = pad(m);
+        // Trigger animation
+        resultDisplay.style.opacity = '0';
+        resultValue.style.transform = 'translateY(10px)';
 
-        // Visual feedback
-        resultDisplay.style.opacity = '0.5';
         setTimeout(() => {
+            // Animate numbers
+            resH.textContent = isNegative ? `-${pad(h)}` : pad(h);
+            resM.textContent = pad(m);
+
+            // Visual feedback
             resultDisplay.style.opacity = '1';
-        }, 100);
+            resultValue.style.transform = 'translateY(0)';
+        }, 150); // A short delay to allow the opacity transition to be noticeable
     }
 
     function pad(num) {
