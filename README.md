@@ -7,14 +7,14 @@ ChronoCalc is a modern, premium web-based time calculator designed for professio
 
 ## ✨ Features
 
--   **Flexible Arithmetic**: Add or subtract hours and minutes effortlessly.
--   **Dynamic Rows**: Add as many time entries as you need.
+-   **Flexible Arithmetic**: Add or subtract multiple hour/minute entries.
+-   **Dynamic Rows**: Add or remove time entries on the fly.
 -   **Continue Calculation**: Use the result of one calculation as the starting point for the next.
--   **History Tracking**: Automatically keeps a history of your calculations during a session.
--   **Premium Design**: A sleek, dark-mode interface with glassmorphism effects and smooth animations.
--   **Responsive**: Works perfectly on desktop and mobile devices.
+-   **Persistent History**: Automatically saves your calculation history to your browser's Local Storage.
+-   **Sleek, Modern Design**: A beautiful dark-mode interface with glassmorphism, fluid animations, and a clean layout.
+-   **Fully Responsive**: Works perfectly on desktop, tablet, and mobile devices.
 
-## 🚀 Deployment
+## 🚀 How to Use / Deployment
 
 ### Synology NAS (Web Station)
 1.  Install **Web Station** from Package Center.
