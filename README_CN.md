@@ -1,7 +1,7 @@
 [English](README.md) | [中文](README_CN.md)
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=1000&color=EC4899&center=true&vCenter=true&width=800&height=100&lines=ChronoCalc;工时计算器;小时分钟追踪" alt="ChronoCalc"/>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=1000&color=EC4899&center=true&vCenter=true&width=800&height=100&lines=ChronoCalc;%E5%B7%A5%E6%97%B6%E8%AE%A1%E7%AE%97%E5%99%A8;%E5%B0%8F%E6%97%B6%E5%88%86%E9%92%9F%E8%BF%BD%E8%B8%AA" alt="ChronoCalc"/>
 </div>
 
 <div align="center">
