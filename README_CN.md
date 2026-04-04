@@ -1,4 +1,4 @@
-[English](time_calculator_web_app--README.md) | [中文](time_calculator_web_app--README_CN.md)
+[English](README.md) | [中文](README_CN.md)
 
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=1000&color=EC4899&center=true&vCenter=true&width=800&height=100&lines=ChronoCalc;工时计算器;小时分钟追踪" alt="ChronoCalc"/>
