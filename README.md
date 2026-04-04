@@ -366,7 +366,7 @@ A: Not directly, but you can fork and host it on your own domain.
 ## 📞 Contact
 
 - 🌐 Website: [bojiang.org](https://bojiang.org)
-- 📧 Email: hi@bojiang.org
+- 📧 Email: cnhakupao@yahoo.co.jp
 - 🐙 GitHub: [@hakupao](https://github.com/hakupao)
 - 🔗 Live: [time.bojiang.org](https://time.bojiang.org)
 

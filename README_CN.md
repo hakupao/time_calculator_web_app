@@ -366,7 +366,7 @@ A: 不能直接，但可以fork后在你自己的域名上托管。
 ## 📞 联系方式
 
 - 🌐 网站: [bojiang.org](https://bojiang.org)
-- 📧 邮箱: hi@bojiang.org
+- 📧 邮箱: cnhakupao@yahoo.co.jp
 - 🐙 GitHub: [@hakupao](https://github.com/hakupao)
 - 🔗 在线: [time.bojiang.org](https://time.bojiang.org)
 
