@@ -1,130 +1,381 @@
-# ChronoCalc
+[English](time_calculator_web_app--README.md) | [中文](time_calculator_web_app--README_CN.md)
 
-<p align="center">
-  <strong>Premium time arithmetic in the browser.</strong><br />
-  A polished, zero-dependency web app for adding, subtracting, chaining, and revisiting time calculations.
-</p>
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=1000&color=EC4899&center=true&vCenter=true&width=800&height=100&lines=ChronoCalc;Time+Calculator;Hour+Minute+Tracker" alt="ChronoCalc"/>
+</div>
 
-<p align="center">
-  <a href="https://time.bojiang.org/">Live Demo</a>
-  ·
-  <a href="https://github.com/hakupao/time_calculator_web_app">Repository</a>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Live-time.bojiang.org-0f172a?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
-  <img src="https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JavaScript-1d4ed8?style=for-the-badge" alt="Tech Stack" />
-  <img src="https://img.shields.io/badge/Design-Responsive%20UI-7c3aed?style=for-the-badge" alt="Responsive UI" />
-  <img src="https://img.shields.io/badge/Storage-LocalStorage-db2777?style=for-the-badge" alt="Local Storage" />
-</p>
+[![HTML5](https://img.shields.io/badge/HTML5-E34C26?style=flat-square&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Glassmorphism](https://img.shields.io/badge/UI-Glassmorphism-FF1493?style=flat-square)](https://time.bojiang.org)
+[![Live Demo](https://img.shields.io/badge/Live-time.bojiang.org-red?style=flat-square)](https://time.bojiang.org)
 
-<p align="center">
-  <img src="./assets/screenshots/desktop-landing.png" alt="ChronoCalc desktop landing view" width="900" />
-</p>
+**Track working hours with beautiful glassmorphism design · Add/subtract time · Result inheritance · History tracking**
 
-## Overview
+</div>
 
-ChronoCalc is a focused utility for people who need quick, reliable time arithmetic without opening spreadsheets or mental-math gymnastics. It supports multi-row addition and subtraction, result chaining, and local history, wrapped in a clean interface that feels more like a small product than a throwaway tool.
+---
 
-This repository is also a strong portfolio piece: it shows product thinking, UI craft, front-end fundamentals, and the ability to ship a complete experience as a lightweight static app.
+## About This Project
 
-## Why It Stands Out
+I'm **Bojiang**, tracking work hours for projects and freelance tasks. Traditional time calculators are clunky and forgettable. I needed something that:
 
-- Solves a real, everyday problem for work logs, editing timelines, scheduling, and duration planning.
-- Ships as a static site with no framework or build pipeline, which keeps deployment simple and performance predictable.
-- Uses a polished visual language with glassmorphism, animated background gradients, and clear information hierarchy.
-- Keeps useful state locally with calculation history stored in the browser.
-- Supports chaining results into the next calculation, which makes repeated workflows much faster.
+- **Instantly adds/subtracts** hours and minutes
+- **Inherits results** for continuous time tracking
+- **Remembers history** of all calculations
+- **Looks beautiful** with modern UI design
+- **Works offline** entirely in the browser
 
-## Feature Highlights
+**ChronoCalc** is my answer—a time calculator that actually *wants* to be used.
 
-- Add and subtract multiple hour/minute rows in a single calculation.
-- Dynamically add or remove rows as the expression grows.
-- Continue from the previous result instead of starting over.
-- Preserve history in `localStorage` for quick recall.
-- Work smoothly across desktop and mobile screen sizes.
-- Run anywhere a static site can be hosted.
+---
 
-## Screenshots
+## 🎯 Features
 
-<p align="center">
-  <img src="./assets/screenshots/desktop-workflow.png" alt="ChronoCalc desktop workflow with result and history" width="900" />
-</p>
+### Core Functionality
 
-<p align="center">
-  <img src="./assets/screenshots/mobile-view.png" alt="ChronoCalc mobile responsive view" width="420" />
-</p>
+| Feature | Details |
+|---------|---------|
+| ⏰ **Time Input** | Hours + minutes, natural language parsing |
+| ➕ **Add Times** | Combine multiple time entries |
+| ➖ **Subtract Times** | Deduct hours from totals |
+| 📊 **Result Display** | Clear format (HH:MM or H:MM) |
+| 🔄 **Result Inheritance** | Use previous result as new input |
+| 📜 **History Tracking** | All past calculations visible |
+| 🗑️ **Clear Entries** | Reset with one click |
 
-## Use Cases
+### Smart Features
 
-- Track work hours across multiple tasks or shifts.
-- Add and subtract video or audio editing durations.
-- Calculate travel, meeting, or production timelines.
-- Quickly sanity-check schedule math without opening a spreadsheet.
+| Feature | Benefit |
+|---------|---------|
+| 💫 **Glassmorphism UI** | Modern, frosted glass effect |
+| 🌈 **Gradient Animation** | Smooth, eye-catching transitions |
+| ⌨️ **Quick Input** | Type times, press Enter |
+| 📋 **Copy to Clipboard** | One-click result sharing |
+| 💾 **Persistent Storage** | Browser localStorage saves history |
+| 📱 **Mobile Optimized** | Perfect for phones, tablets, desktop |
 
-## Tech Stack
+---
 
-- `HTML5` for semantic structure and clean deployment.
-- `CSS3` for layout, animation, glassmorphism, and responsive behavior.
-- `Vanilla JavaScript` for time arithmetic, dynamic rows, UI state, and history persistence.
-- `Google Fonts` using the `Outfit` typeface for a sharper visual identity.
+## 🌐 Live Demo
 
-## Project Structure
+Visit **[time.bojiang.org](https://time.bojiang.org)** to use it now.
 
-```text
-.
-├── index.html     # Semantic page structure and metadata
-├── style.css      # Visual design, motion, layout, responsive rules
-├── script.js      # Time calculation logic, row management, history state
-└── assets/
-    └── screenshots/
+---
+
+## 📸 Screenshots
+
+The app comes with beautiful preview screenshots:
+
+```
+assets/screenshots/
+├── desktop-landing.png     # Full desktop view
+├── desktop-workflow.png    # Mid-calculation screenshot
+└── mobile-view.png         # Mobile responsive view
 ```
 
-## Run Locally
+View these to see the glassmorphism design in action.
 
-This is a static front-end project, so local setup is intentionally minimal.
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Modern browser (Chrome, Firefox, Safari, Edge)
+- No dependencies, no server needed!
+
+### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/hakupao/time_calculator_web_app.git
 cd time_calculator_web_app
+
+# Open in browser
+open index.html        # macOS
+xdg-open index.html    # Linux
+start index.html       # Windows
 ```
 
-Then use either of these options:
+---
 
-```bash
-# Option 1: open directly
-start index.html
+## 📂 Project Structure
 
-# Option 2: serve locally
-python -m http.server 8000
+```
+time_calculator_web_app/
+├── index.html              # Main entry point
+├── styles.css              # Glassmorphism styling
+├── app.js                  # Core logic & event handlers
+└── assets/
+    └── screenshots/
+        ├── desktop-landing.png
+        ├── desktop-workflow.png
+        └── mobile-view.png
 ```
 
-If you use the local server option, open [http://localhost:8000](http://localhost:8000).
+### Key Files
 
-## Deployment
+- **index.html**: Minimal semantic HTML structure
+- **styles.css**: Glassmorphism, gradients, animations, Outfit font
+- **app.js**: Time parsing, calculation logic, history management
 
-The live version is available at [time.bojiang.org](https://time.bojiang.org/).
+---
 
-Because the app is fully static, it can also be deployed to platforms such as:
+## 💡 How to Use
 
-- GitHub Pages
-- Cloudflare Pages
-- Netlify
-- Vercel
-- Nginx or any traditional web server
-- Synology Web Station
+### Basic Workflow
 
-## Portfolio Value
+1. **Enter first time**: Type `2:30` (or `2h 30m`)
+2. **Choose operation**: Click `+` or `-`
+3. **Enter second time**: Type `1:15`
+4. **Get result**: See `3:45` instantly
+5. **Continue**: Click result to use it as new input
 
-If you are evaluating this project as a sample of front-end work, it demonstrates:
+### Advanced Features
 
-- The ability to turn a small utility into a polished product experience.
-- Good judgment about when a framework is unnecessary.
-- Attention to interaction details such as row animation, visual feedback, and persistent state.
-- A deployable, user-facing result rather than just an isolated code exercise.
+#### Result Inheritance
 
-## Builder Note
+```
+Step 1: 5:00 + 2:30 = 7:30
+Step 2: 7:30 + 1:00 = 8:30  ← Click result to inherit
+Step 3: 8:30 - 0:45 = 7:45
+```
 
-Built and deployed by [Bojiang Zhang](https://github.com/hakupao).
+#### Time Format Support
 
-If you like practical, well-finished web products that prioritize clarity, speed, and usability, this project is a representative example of that approach.
+All formats work:
+- `1:30` (hours:minutes)
+- `90` (minutes only)
+- `1h 30m` (natural language)
+- `1 hour 30 minutes` (full words)
+
+#### History Tracking
+
+Every calculation is saved:
+```
+[10:00] + [5:00] = 15:00
+[15:00] - [2:30] = 12:30
+[12:30] + [0:45] = 13:15
+```
+
+---
+
+## 🎨 Design Philosophy
+
+### Glassmorphism Effect
+
+The UI uses modern glassmorphism:
+
+```css
+backdrop-filter: blur(10px);
+background: rgba(255, 255, 255, 0.25);
+border: 1px solid rgba(255, 255, 255, 0.5);
+```
+
+### Color Gradient Animation
+
+Smooth gradient transitions:
+
+```css
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+animation: gradient-shift 6s ease infinite;
+```
+
+### Typography
+
+Uses **Outfit** font for modern, readable interface:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700" rel="stylesheet">
+```
+
+---
+
+## 🔧 Technology Stack
+
+| Component | Technology |
+|-----------|------------|
+| 📄 **Markup** | HTML5 semantic structure |
+| 🎨 **Styling** | CSS3 (glassmorphism, grid, animations) |
+| ⚙️ **Logic** | Vanilla JavaScript (ES6+) |
+| 🔤 **Font** | Google Fonts (Outfit) |
+| 💾 **Storage** | Browser localStorage |
+| 🌐 **Hosting** | Static file service |
+
+---
+
+## 📱 Responsive Design
+
+### Desktop View
+- Full-width calculator with large input fields
+- Spacious layout with clear visual hierarchy
+- Keyboard-friendly shortcuts
+
+### Tablet View
+- Centered calculator panel
+- Touch-optimized button sizes
+- Portrait/landscape orientation support
+
+### Mobile View
+- Single-column layout
+- Thumb-friendly button positioning
+- Optimized for one-handed operation
+- Large, readable text
+
+---
+
+## ⚙️ Configuration
+
+### Customize Colors
+
+Edit `styles.css` gradient colors:
+
+```css
+:root {
+  --color-primary: #667eea;
+  --color-secondary: #764ba2;
+  --color-accent: #ec4899;
+}
+```
+
+### Change Font
+
+Modify `index.html` to use different font:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=YourFont" rel="stylesheet">
+```
+
+### Adjust Blur Effect
+
+Modify glassmorphism backdrop blur in `styles.css`:
+
+```css
+.calculator {
+  backdrop-filter: blur(20px);  /* Increase from 10px */
+}
+```
+
+---
+
+## 💾 Data & Privacy
+
+### Browser Storage
+
+All calculations are stored locally:
+
+```javascript
+// Stored in browser's localStorage
+localStorage.setItem('timeHistory', JSON.stringify(history));
+```
+
+**Privacy:** No data is sent to servers. Everything stays on your device.
+
+### Clear Data
+
+Users can clear history at any time:
+- Click "Clear History" button
+- localStorage is wiped
+- Calculation fresh start
+
+---
+
+## 📊 Example Use Cases
+
+### Use Case 1: Freelance Project Tracking
+
+**Project: Website Redesign**
+```
+Day 1: 8:30 (morning design)
+Day 2: 6:45 (coding)
+Day 3: 4:15 (testing & fixes)
+Total: 8:30 + 6:45 + 4:15 = 19:30 hours
+```
+
+### Use Case 2: Team Time Allocation
+
+**Team Meeting Fallback:**
+```
+Meeting 1: 2:00 (requirements)
+Meeting 2: 1:30 (design review)
+Coding: 3:45 (implementation)
+Total: 2:00 + 1:30 + 3:45 = 7:15 hours
+```
+
+### Use Case 3: Workout Duration
+
+**Weekly Training:**
+```
+Monday: 1:30 (gym)
+Wednesday: 0:45 (cardio)
+Friday: 1:15 (strength)
+Total: 1:30 + 0:45 + 1:15 = 3:30 hours
+```
+
+---
+
+## 🚨 Known Limitations
+
+| Limitation | Reason | Workaround |
+|-----------|--------|-----------|
+| No timezone handling | Simplified for UX | Use for relative time, not absolute |
+| Limited to 24-59 hours | Design assumption | Break into days manually |
+| No recurring calculations | Single-purpose tool | Suitable for on-demand use |
+| No export to CSV | Privacy-first approach | Copy results manually |
+
+---
+
+## 🤝 Contributing
+
+Found a bug? Want to add features like time-to-deadline?
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit improvements
+4. Open a Pull Request
+
+---
+
+## 📝 License
+
+MIT License - Use freely for personal and commercial projects.
+
+---
+
+## 🙋 FAQ
+
+**Q: Why glassmorphism?**
+A: Modern, beautiful aesthetic that feels contemporary without being overly complex. It's also trending in 2024-2025 UI design.
+
+**Q: Does it work offline?**
+A: Yes! Completely offline-capable. Everything runs in your browser.
+
+**Q: Can I export my history?**
+A: Currently manual copy-paste. Future versions may add CSV/JSON export.
+
+**Q: What browsers are supported?**
+A: All modern browsers (Chrome, Firefox, Safari, Edge). Requires CSS Grid and localStorage support.
+
+**Q: Can I embed this on my website?**
+A: Not directly, but you can fork and host it on your own domain.
+
+---
+
+## 📞 Contact
+
+- 🌐 Website: [bojiang.org](https://bojiang.org)
+- 📧 Email: hi@bojiang.org
+- 🐙 GitHub: [@hakupao](https://github.com/hakupao)
+- 🔗 Live: [time.bojiang.org](https://time.bojiang.org)
+
+---
+
+<div align="center">
+
+**Track time beautifully, calculate effortlessly ⏰**
+
+Made with ❤️ in Yokohama
+
+</div>
